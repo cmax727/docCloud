@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red97\green162\blue209;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12800\viewh17740\viewkind1
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs24 \cf2 Use case #1 - Entering the company name\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b0 \cf0 You should build a simple user interface where the user can enter the company name.\
+You should try and fetch information about this company via the D&B API. In case that more than one company is resulted, you should display the user with the different companies in a list and allow him to select one, in order to restart the process.\
+Once you have the company selected, you should fetch the following information from D&B:\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 {\listtext	1.	}Company Executives and their relevant info (email, phone, address, etc.)\
+{\listtext	2.	}Industry and sub-industry /market - all that is presented (sometimes it's more than one)\
+{\listtext	3.	}The description about the company\
+{\listtext	4.	}The address of the company - if more than one exists create a list of addresses\
+{\listtext	5.	}Full list of competitors - company names and duns numbers\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+Once you have this record, you should repeat the process for each of the companies in the competitors list. In the results you should exclude the company/companies that are already checked.\
+\
+You should repeat this process 3 levels down, so if, for example, you start with company A that have competitors B, C, and D, you should create the same records for B, C, and D 
+\b and
+\b0  their competitors.\
+\
+The final record that you'll save in the MySQL DB should clearly indicate the full path from the company selected to the competitors, sub-competitors, etc. including all of their info.\
+\
+The user-interface should show the record in a tree format, starting at the top with the selected company.\
+}

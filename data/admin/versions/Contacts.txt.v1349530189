@@ -1,0 +1,26 @@
+job url = oDesk https://www.odesk.com/jobs/~01ae88d8ab3b454dbb
+
+==== client
+oDesk client =  Lagon Business Development / Eran Lagon (lagon)
+skype   = eranlagon /  Eran Lagon
+
+
+====== 
+D&B
+Application:Pomti
+Key: 2wepuynqa2knjssjvpmy49hd
+For REST Calls please use the following Username and Password.
+Username : sandboxAPI
+Password : DnBD1rect
+
+FTP ==============
+server: pomti.com
+port: 21
+user: userpomti
+pass: goodVibes3
+path: /duns
+
+MySQL =================
+db/user: drupalbusinessdb
+pass: goodVibes3
+Host Name: drupalbusinessdb.db.9044772.hostedresource.com
